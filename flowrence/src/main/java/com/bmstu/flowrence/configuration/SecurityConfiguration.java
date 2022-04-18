@@ -1,6 +1,7 @@
 package com.bmstu.flowrence.configuration;
 
 import com.bmstu.flowrence.auth.jwt.JwtConfigurer;
+import com.bmstu.flowrence.auth.jwt.service.JwtTokenService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -11,16 +12,16 @@ import org.springframework.security.config.annotation.web.builders.WebSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
 import org.springframework.security.config.http.SessionCreationPolicy;
 
-
-@Configuration
 @RequiredArgsConstructor
+@Configuration
 public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
 
-    private final JwtConfigurer jwtConfigurer;
+    private final JwtTokenService jwtTokenProvider;
 
-    private static final String ADMIN_ENDPOINT = "/api/*";
+    private static final String API_ENDPOINT = "/api/**";
     private static final String LOGIN_ENDPOINT = "/auth/*";
-    private static final String INDEX_ENDPOINT = "/index*";
+    private static final String INDEX_ENDPOINT = "/index/**";
+    private static final String ERROR_ENDPOINT = "/error";
 
     @Bean
     @Override
@@ -30,21 +31,23 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
 
     @Override
     public void configure(WebSecurity web) throws Exception {
-        web.ignoring().antMatchers(HttpMethod.GET, "/**");
+        web.ignoring()
+                .antMatchers(HttpMethod.GET, "/**")
+                .antMatchers(HttpMethod.POST, LOGIN_ENDPOINT)
+                .antMatchers(ERROR_ENDPOINT);
     }
 
     @Override
     protected void configure(HttpSecurity http) throws Exception {
         http
-//                .httpBasic().disable()
                 .csrf().disable()
                 .sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS)
                 .and()
                 .authorizeRequests()
-                .antMatchers(LOGIN_ENDPOINT, "/index/**").permitAll()
-                .antMatchers(HttpMethod.POST, ADMIN_ENDPOINT).permitAll()
+                .antMatchers(LOGIN_ENDPOINT, INDEX_ENDPOINT, ERROR_ENDPOINT).permitAll()
+                .antMatchers(HttpMethod.POST, API_ENDPOINT).permitAll()
                 .anyRequest().authenticated()
                 .and()
-                .apply(jwtConfigurer);
+                .apply(new JwtConfigurer(jwtTokenProvider));
     }
 }

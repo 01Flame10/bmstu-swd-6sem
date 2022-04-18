@@ -9,6 +9,8 @@ import lombok.experimental.FieldDefaults;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
 import javax.persistence.ManyToMany;
+import javax.persistence.OneToMany;
+import java.util.List;
 import java.util.Set;
 
 @Data
@@ -18,13 +20,18 @@ import java.util.Set;
 @FieldDefaults(level = AccessLevel.PRIVATE)
 public class User extends BaseEntity {
 
-    String username;
     String firstName;
     String lastName;
+//    TODO: add @UniqueConstraint
     String email;
     String password;
 
     @ManyToMany(mappedBy = "users", fetch = FetchType.EAGER)
-    Set<UserGroup> groups;
+    Set<Team> teams;
 
+    @OneToMany(mappedBy="reporter")
+    List<Task> reportedTasks;
+
+    @OneToMany(mappedBy="assignee")
+    List<Task> assignedTasks;
 }

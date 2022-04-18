@@ -6,7 +6,7 @@ import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
 
 @Mapper
-public interface UserToJwtUserMapper {
+public interface UserToJwtUserMapper extends BaseMapper<User, JwtUser> {
 
     @Mapping(target = "userIdentifier", source = "uuid")
     @Mapping(target = "userEmail", source = "email")

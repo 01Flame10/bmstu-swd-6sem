@@ -1,6 +1,6 @@
 package com.bmstu.flowrence.repository;
 
-import com.bmstu.flowrence.entity.User;
+import com.bmstu.flowrence.entity.Team;
 
-public interface TeamRepository extends BaseEntityRepository<User> {
+public interface TeamRepository extends BaseEntityRepository<Team> {
 }

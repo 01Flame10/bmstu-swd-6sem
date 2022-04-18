@@ -7,6 +7,9 @@ import lombok.experimental.Accessors;
 import lombok.experimental.FieldDefaults;
 
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 
 @Data
 @Entity
@@ -14,4 +17,11 @@ import javax.persistence.Entity;
 @EqualsAndHashCode(callSuper = true)
 @FieldDefaults(level = AccessLevel.PRIVATE)
 public class Dashboard extends BaseEntity {
+
+    String name;
+    String description;
+
+    @ManyToOne(fetch = FetchType.EAGER)
+    @JoinColumn(name="owner_team_uuid", nullable=false)
+    Team owner;
 }

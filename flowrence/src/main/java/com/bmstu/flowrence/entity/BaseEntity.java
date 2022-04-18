@@ -16,7 +16,6 @@ public abstract class BaseEntity {
     @GeneratedValue(generator = "UUID")
     @GenericGenerator(name = "UUID",
             strategy = "org.hibernate.id.UUIDGenerator")
-    @Column(name = "id", updatable = false, nullable = false)
-    private String uuid; // TODO: resolve "Repeated column in mapping for collection: com.bmstu.flowrence.entity.UserGroup.users column: uuid"
-
+    @Column(name = "uuid", updatable = false, nullable = false)
+    String uuid;
 }

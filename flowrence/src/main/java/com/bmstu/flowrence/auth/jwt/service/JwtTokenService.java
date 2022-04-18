@@ -53,8 +53,8 @@ public class JwtTokenService {
             throw new UsernameNotFoundException("User's passwords doesn't match");
     }
 
-    public Optional<String> resolveToken(HttpServletRequest req) {
-        String bearerToken = req.getHeader("Authorization");
+    public Optional<String> resolveToken(HttpServletRequest request) {
+        String bearerToken = request.getHeader("Authorization");
         log.debug("Got token: {}", bearerToken);
         return Optional.of(bearerToken)
                 .filter(token -> token.startsWith("SKED_"))

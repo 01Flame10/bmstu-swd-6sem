@@ -4,7 +4,6 @@ import com.bmstu.flowrence.auth.jwt.service.JwtTokenService;
 import lombok.RequiredArgsConstructor;
 import lombok.SneakyThrows;
 import org.springframework.security.core.context.SecurityContextHolder;
-import org.springframework.stereotype.Component;
 import org.springframework.web.filter.GenericFilterBean;
 
 import javax.servlet.FilterChain;
@@ -14,7 +13,7 @@ import javax.servlet.http.HttpServletRequest;
 import java.util.Optional;
 
 
-@Component
+//@Component
 @RequiredArgsConstructor
 public class JwtTokenFilter extends GenericFilterBean {
 

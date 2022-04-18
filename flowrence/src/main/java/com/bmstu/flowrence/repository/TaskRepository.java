@@ -1,6 +1,6 @@
 package com.bmstu.flowrence.repository;
 
-import com.bmstu.flowrence.entity.User;
+import com.bmstu.flowrence.entity.Task;
 
-public interface TaskRepository extends BaseEntityRepository<User> {
+public interface TaskRepository extends BaseEntityRepository<Task> {
 }

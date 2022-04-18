@@ -1,6 +1,6 @@
 package com.bmstu.flowrence.repository;
 
-import com.bmstu.flowrence.entity.User;
+import com.bmstu.flowrence.entity.Dashboard;
 
-public interface DashboardRepository extends BaseEntityRepository<User> {
+public interface DashboardRepository extends BaseEntityRepository<Dashboard> {
 }
