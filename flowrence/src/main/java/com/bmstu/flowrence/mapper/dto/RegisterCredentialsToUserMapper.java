@@ -4,14 +4,10 @@ import com.bmstu.flowrence.dto.request.UserRegisterCredentialsDto;
 import com.bmstu.flowrence.entity.User;
 import com.bmstu.flowrence.mapper.BaseMapper;
 import org.mapstruct.Mapper;
-import org.mapstruct.Mapping;
 
 @Mapper
-public interface RegisterCredentialsToUserMapper extends BaseMapper<User, UserRegisterCredentialsDto> {
+public interface RegisterCredentialsToUserMapper extends BaseMapper<UserRegisterCredentialsDto, User> {
 
-    @Mapping(target = "firstName", source = "firstName")
-    @Mapping(target = "lastName", source = "lastName")
-    @Mapping(target = "email", source = "email")
-    @Mapping(target = "password", source = "password")
+    @Override
     User mapSourceToDestination(UserRegisterCredentialsDto source);
 }

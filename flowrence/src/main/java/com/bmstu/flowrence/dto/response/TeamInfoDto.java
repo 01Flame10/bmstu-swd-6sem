@@ -5,13 +5,14 @@ import lombok.Builder;
 import lombok.Getter;
 import lombok.experimental.FieldDefaults;
 
-import java.io.Serializable;
+import java.util.List;
 
 @Getter
 @Builder
 @FieldDefaults(level = AccessLevel.PRIVATE, makeFinal = true)
-public class JwtTokenDto implements Serializable {
+public class TeamInfoDto {
 
-    String jwtToken;
-    String userUuid;
+    String name;
+    List<UserInfoDto> teamMembers;
+
 }

@@ -5,13 +5,15 @@ import lombok.Builder;
 import lombok.Getter;
 import lombok.experimental.FieldDefaults;
 
-import java.io.Serializable;
-
 @Getter
 @Builder
 @FieldDefaults(level = AccessLevel.PRIVATE, makeFinal = true)
-public class JwtTokenDto implements Serializable {
+public class UserInfoDto {
 
-    String jwtToken;
-    String userUuid;
+    String firstName;
+    String lastName;
+    String email;
+    String password;
+    Boolean active;
+
 }

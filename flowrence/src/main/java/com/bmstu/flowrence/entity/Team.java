@@ -26,5 +26,5 @@ public class Team extends BaseEntity {
     Set<User> users;
 
     @OneToMany(mappedBy="owner")
-    Set<Dashboard> assignedTasks;
+    Set<Dashboard> dashboards;
 }

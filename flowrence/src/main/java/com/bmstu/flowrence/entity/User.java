@@ -25,6 +25,7 @@ public class User extends BaseEntity {
 //    TODO: add @UniqueConstraint
     String email;
     String password;
+    Boolean active;
 
     @ManyToMany(mappedBy = "users", fetch = FetchType.EAGER)
     Set<Team> teams;
