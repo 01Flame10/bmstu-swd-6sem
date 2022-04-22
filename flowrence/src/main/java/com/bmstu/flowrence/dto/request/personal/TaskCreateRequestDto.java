@@ -6,7 +6,7 @@ import lombok.experimental.FieldDefaults;
 
 @Getter
 @FieldDefaults(level = AccessLevel.PRIVATE)
-public class TaskCreateRequestDto extends AbstractPersonalRequestDto {
+public class TaskCreateRequestDto extends AbstractPersonalRequestDto { // jsonSchema2pojo next time, for sure...
 
     String header;
     String description;

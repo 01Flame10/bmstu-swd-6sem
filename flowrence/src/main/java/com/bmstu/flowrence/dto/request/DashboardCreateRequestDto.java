@@ -6,10 +6,11 @@ import lombok.experimental.FieldDefaults;
 
 @Getter
 @FieldDefaults(level = AccessLevel.PRIVATE)
-public class DashboardCreateRequestDto {
+public class DashboardCreateRequestDto { // jsonSchema2pojo next time, for sure...
 
     String name;
     String description;
     String teamUuid;
+    String prefix;
 
 }

@@ -1,11 +1,14 @@
 package com.bmstu.flowrence.service;
 
+import com.bmstu.flowrence.dto.request.DashboardCreateRequestDto;
 import com.bmstu.flowrence.entity.Dashboard;
 import com.bmstu.flowrence.entity.Team;
 import com.bmstu.flowrence.repository.DashboardRepository;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
+
+import java.util.List;
 
 
 @Slf4j
@@ -15,13 +18,18 @@ public class DashboardService extends AbstractEntityService<Dashboard, Dashboard
 
     private final TeamsService teamsService;
 
-    public Dashboard createDashboard(String name, String description, String teamIdentifier) {
-        Team team = teamsService.retrieveByIdentifier(teamIdentifier);
+    public Dashboard createDashboard(DashboardCreateRequestDto request) {
+        Team team = teamsService.retrieveByIdentifier(request.getTeamUuid());
         Dashboard dashboard = new Dashboard()
-                .setName(name)
-                .setDescription(description)
+                .setName(request.getName())
+                .setDescription(request.getDescription())
+                .setPrefix(request.getPrefix())
                 .setOwner(team);
         return repository.save(dashboard);
+    }
+
+    public List<Dashboard> listAllDashboards() {
+        return repository.findAll();
     }
 
 }

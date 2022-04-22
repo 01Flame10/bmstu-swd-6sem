@@ -6,7 +6,7 @@ import com.bmstu.flowrence.mapper.BaseMapper;
 import org.mapstruct.InjectionStrategy;
 import org.mapstruct.Mapper;
 
-@Mapper(uses = UserToUserInfoMapper.class,
+@Mapper(uses = {UserToUserInfoMapper.class, TaskToTaskInfoMapper.class},
         injectionStrategy = InjectionStrategy.CONSTRUCTOR)
 public interface DashboardToDashboardInfoMapper extends BaseMapper<Dashboard, DashboardInfoDto> {
 

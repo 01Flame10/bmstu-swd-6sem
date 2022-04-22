@@ -6,7 +6,7 @@ import lombok.experimental.FieldDefaults;
 
 @Getter
 @FieldDefaults(level = AccessLevel.PRIVATE)
-public class TeamCreateRequestDto {
+public class TeamCreateRequestDto { // jsonSchema2pojo next time, for sure...
 
     String name;
 

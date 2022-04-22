@@ -10,8 +10,9 @@ import java.util.List;
 @Getter
 @Builder
 @FieldDefaults(level = AccessLevel.PRIVATE, makeFinal = true)
-public class DashboardInfoDto {
+public class DashboardInfoDto { // jsonSchema2pojo next time, for sure...
 
+    String uuid; // TODO: to abstract
     String name;
     String description;
     String prefix;

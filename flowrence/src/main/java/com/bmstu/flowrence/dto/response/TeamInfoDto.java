@@ -10,7 +10,7 @@ import java.util.List;
 @Getter
 @Builder
 @FieldDefaults(level = AccessLevel.PRIVATE, makeFinal = true)
-public class TeamInfoDto {
+public class TeamInfoDto { // jsonSchema2pojo next time, for sure...
 
     String uuid;
     String name;

@@ -8,7 +8,7 @@ import lombok.experimental.FieldDefaults;
 @Getter
 @Builder
 @FieldDefaults(level = AccessLevel.PRIVATE, makeFinal = true)
-public class UserInfoDto {
+public class UserInfoDto { // jsonSchema2pojo next time, for sure...
 
     String uuid;
     String firstName;

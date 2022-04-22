@@ -9,6 +9,7 @@ import com.bmstu.flowrence.repository.TaskRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
 import java.util.Optional;
 
 @Service
@@ -55,5 +56,15 @@ public class TasksService extends AbstractEntityService<Task, TaskRepository> {
                 .setPriority(Task.TaskPriority.valueOf(request.getPriority()));
 
         return repository.save(task);
+    }
+
+    public List<Task> listReportedTasks(String userIdentifier) {
+        User reporter = userService.retrieveByIdentifier(userIdentifier);
+        return repository.findAllByReporter(reporter);
+    }
+
+    public List<Task> listAssignedTasks(String userIdentifier) {
+        User assignee = userService.retrieveByIdentifier(userIdentifier);
+        return repository.findAllByAssignee(assignee);
     }
 }

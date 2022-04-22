@@ -6,7 +6,7 @@ import lombok.experimental.FieldDefaults;
 
 @Getter
 @FieldDefaults(level = AccessLevel.PRIVATE)
-public class TaskUpdateRequestDto extends AbstractPersonalRequestDto {
+public class TaskUpdateRequestDto extends AbstractPersonalRequestDto { // jsonSchema2pojo next time, for sure...
 
     String taskUuid;
     String header;

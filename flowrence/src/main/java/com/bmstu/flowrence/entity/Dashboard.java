@@ -3,6 +3,8 @@ package com.bmstu.flowrence.entity;
 import lombok.AccessLevel;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
+import lombok.Getter;
+import lombok.Setter;
 import lombok.experimental.Accessors;
 import lombok.experimental.FieldDefaults;
 
@@ -13,7 +15,8 @@ import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 import java.util.List;
 
-@Data
+@Getter
+@Setter
 @Entity
 @Accessors(chain = true)
 @EqualsAndHashCode(callSuper = true)
