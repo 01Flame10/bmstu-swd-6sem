@@ -9,6 +9,7 @@ import lombok.AccessLevel;
 import lombok.RequiredArgsConstructor;
 import lombok.experimental.FieldDefaults;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.userdetails.UserDetails;
@@ -27,6 +28,8 @@ public class JwtTokenService {
     JwtUserDetailsService userDetailsService;
     String secret;
     JwtParser jwtParser;
+    @Value("${jwt.token.prefix:Bearer }")
+    String jwtPrefix;
 
     public String createToken(User user) {
         Claims claims = Jwts.claims().setSubject(user.getUuid());
@@ -57,8 +60,8 @@ public class JwtTokenService {
         String bearerToken = request.getHeader("Authorization");
         log.debug("Got token: {}", bearerToken);
         return Optional.of(bearerToken)
-                .filter(token -> token.startsWith("SKED_"))
-                .map(token -> token.substring(5));
+                .filter(token -> token.startsWith(jwtPrefix))
+                .map(token -> token.substring(jwtPrefix.length()));
     }
 
     private String extractIdentifier(String token) {

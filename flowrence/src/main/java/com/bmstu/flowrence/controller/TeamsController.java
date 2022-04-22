@@ -1,5 +1,6 @@
 package com.bmstu.flowrence.controller;
 
+import com.bmstu.flowrence.dto.request.TeamCreateRequestDto;
 import com.bmstu.flowrence.dto.request.personal.ListTeamsRequestDto;
 import com.bmstu.flowrence.dto.request.personal.UserToTeamActionRequestDto;
 import com.bmstu.flowrence.dto.response.TeamInfoDto;
@@ -29,6 +30,20 @@ public class TeamsController {
     private final TeamToTeamInfoMapper teamToTeamInfoMapper;
 
     // maybe some kind of annotation-based wrapper for error handling
+    @PostMapping(value = "/create", consumes = APPLICATION_JSON_VALUE, produces = APPLICATION_JSON_VALUE)
+    public ResponseEntity<TeamInfoDto> createTeam(@RequestBody TeamCreateRequestDto request) {
+        log.debug("Creating team with name {}", request.getName());
+        try {
+            Team teams = teamsService.createTeam(request.getName());
+            TeamInfoDto responseDto = teamToTeamInfoMapper.mapSourceToDestination(teams);
+
+            return new ResponseEntity<>(responseDto, HttpStatus.OK);
+        } catch (Exception e) {
+            log.error("Error processing request", e);
+            return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
+        }
+    }
+
     @PostMapping(value = "/list", consumes = APPLICATION_JSON_VALUE, produces = APPLICATION_JSON_VALUE)
     public ResponseEntity<List<TeamInfoDto>> listAllTeams(@RequestBody ListTeamsRequestDto request) {
         String userUuid = request.getUserUuid();

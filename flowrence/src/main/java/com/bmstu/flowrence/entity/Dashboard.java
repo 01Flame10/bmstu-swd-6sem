@@ -10,6 +10,8 @@ import javax.persistence.Entity;
 import javax.persistence.FetchType;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
+import java.util.List;
 
 @Data
 @Entity
@@ -20,6 +22,10 @@ public class Dashboard extends BaseEntity {
 
     String name;
     String description;
+    String prefix;
+
+    @OneToMany(mappedBy="dashboard")
+    List<Task> tasks;
 
     @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name="owner_team_uuid", nullable=false)

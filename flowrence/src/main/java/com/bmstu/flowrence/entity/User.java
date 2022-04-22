@@ -7,7 +7,6 @@ import lombok.experimental.Accessors;
 import lombok.experimental.FieldDefaults;
 
 import javax.persistence.Entity;
-import javax.persistence.FetchType;
 import javax.persistence.ManyToMany;
 import javax.persistence.OneToMany;
 import java.util.List;
@@ -16,7 +15,7 @@ import java.util.Set;
 @Data
 @Entity
 @Accessors(chain = true)
-@EqualsAndHashCode(callSuper = true)
+@EqualsAndHashCode(callSuper = true, exclude = {"teams"})
 @FieldDefaults(level = AccessLevel.PRIVATE)
 public class User extends BaseEntity {
 
@@ -27,7 +26,7 @@ public class User extends BaseEntity {
     String password;
     Boolean active;
 
-    @ManyToMany(mappedBy = "users", fetch = FetchType.EAGER)
+    @ManyToMany(mappedBy = "users")
     Set<Team> teams;
 
     @OneToMany(mappedBy="reporter")

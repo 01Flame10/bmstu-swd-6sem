@@ -10,10 +10,12 @@ import java.util.List;
 @Getter
 @Builder
 @FieldDefaults(level = AccessLevel.PRIVATE, makeFinal = true)
-public class TeamInfoDto {
+public class DashboardInfoDto {
 
-    String uuid;
     String name;
-    List<UserInfoDto> teamMembers;
+    String description;
+    String prefix;
+
+    List<TaskInfoDto> tasks;
 
 }

@@ -5,15 +5,19 @@ import lombok.Builder;
 import lombok.Getter;
 import lombok.experimental.FieldDefaults;
 
-import java.util.List;
-
 @Getter
 @Builder
 @FieldDefaults(level = AccessLevel.PRIVATE, makeFinal = true)
-public class TeamInfoDto {
+public class TaskInfoDto {
 
-    String uuid;
-    String name;
-    List<UserInfoDto> teamMembers;
+    String simpleIdentifier;
+    String header;
+    String description;
 
+    String type;
+    String status;
+    String priority;
+
+    UserInfoDto reporter;
+    UserInfoDto assignee;
 }

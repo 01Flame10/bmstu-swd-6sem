@@ -21,7 +21,7 @@ import javax.persistence.ManyToOne;
 public class Task extends BaseEntity {
 
     String simpleIdentifierPrefix;
-    String simpleIdentifierNumber;
+    Long simpleIdentifierNumber;
 
     String header;
     String description;
@@ -32,6 +32,10 @@ public class Task extends BaseEntity {
     TaskStatus status;
     @Enumerated(EnumType.STRING)
     TaskPriority priority;
+
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name="dashboard_uuid", nullable=false)
+    Dashboard dashboard;
 
     @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name="reporter_uuid", nullable=false)
