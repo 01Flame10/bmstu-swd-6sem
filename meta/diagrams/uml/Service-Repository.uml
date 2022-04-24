@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement>com.bmstu.flowrence.repository.TeamRepository</OriginalElement>
+  <nodes>
+    <node x="316.0" y="610.5">com.bmstu.flowrence.mapper.dto.TaskToTaskInfoMapper</node>
+    <node x="-2.0" y="90.5">com.bmstu.flowrence.repository.TeamRepository</node>
+    <node x="746.0" y="650.5">com.bmstu.flowrence.mapper.dto.RegisterCredentialsToUserMapper</node>
+    <node x="423.5" y="210.5">com.bmstu.flowrence.repository.UserRepository</node>
+    <node x="1483.0" y="374.5">com.bmstu.flowrence.service.TasksService</node>
+    <node x="2246.0" y="250.5">com.bmstu.flowrence.entity.BaseEntity</node>
+    <node x="1281.0" y="383.5">com.bmstu.flowrence.service.UserService</node>
+    <node x="787.0" y="238.5">com.bmstu.flowrence.service.DashboardService</node>
+    <node x="441.0" y="-16.5">com.bmstu.flowrence.repository.DashboardRepository</node>
+    <node x="276.0" y="930.5">com.bmstu.flowrence.mapper.dto.DashboardToDashboardInfoMapper</node>
+    <node x="1911.0" y="238.0">com.bmstu.flowrence.service.AbstractEntityService</node>
+    <node x="436.0" y="103.5">com.bmstu.flowrence.repository.BaseEntityRepository</node>
+    <node x="1879.0" y="414.5">com.bmstu.flowrence.service.TeamsService</node>
+    <node x="1036.0" y="770.5">com.bmstu.flowrence.mapper.dto.UserToUserInfoMapper</node>
+    <node x="323.0" y="758.5">com.bmstu.flowrence.mapper.BaseMapper</node>
+    <node x="-30.0" y="770.5">com.bmstu.flowrence.mapper.UserToJwtUserMapper</node>
+    <node x="2398.5" y="66.5">com.bmstu.flowrence.repository.TaskRepository</node>
+    <node x="790.0" y="890.5">com.bmstu.flowrence.mapper.dto.TeamToTeamInfoMapper</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="com.bmstu.flowrence.mapper.dto.TeamToTeamInfoMapper" target="com.bmstu.flowrence.mapper.BaseMapper">
+      <point x="0.0" y="-29.5" />
+      <point x="960.0" y="820.0" />
+      <point x="157.0" y="20.0" />
+    </edge>
+    <edge source="com.bmstu.flowrence.service.TeamsService" target="com.bmstu.flowrence.service.AbstractEntityService">
+      <point x="0.0" y="-65.5" />
+      <point x="0.0" y="42.0" />
+    </edge>
+    <edge source="com.bmstu.flowrence.mapper.dto.TaskToTaskInfoMapper" target="com.bmstu.flowrence.mapper.BaseMapper">
+      <point x="0.0" y="29.5" />
+      <point x="0.0" y="-41.5" />
+    </edge>
+    <edge source="com.bmstu.flowrence.repository.DashboardRepository" target="com.bmstu.flowrence.repository.BaseEntityRepository">
+      <point x="0.0" y="16.5" />
+      <point x="0.0" y="-16.5" />
+    </edge>
+    <edge source="com.bmstu.flowrence.repository.TeamRepository" target="com.bmstu.flowrence.repository.BaseEntityRepository">
+      <point x="162.0" y="0.0" />
+      <point x="-124.0" y="0.0" />
+    </edge>
+    <edge source="com.bmstu.flowrence.mapper.UserToJwtUserMapper" target="com.bmstu.flowrence.mapper.BaseMapper">
+      <point x="150.0" y="0.0" />
+      <point x="-157.0" y="0.0" />
+    </edge>
+    <edge source="com.bmstu.flowrence.service.AbstractEntityService" target="com.bmstu.flowrence.repository.BaseEntityRepository">
+      <point x="0.0" y="-42.0" />
+      <point x="2040.0" y="130.0" />
+      <point x="124.0" y="10.0" />
+    </edge>
+    <edge source="com.bmstu.flowrence.mapper.dto.UserToUserInfoMapper" target="com.bmstu.flowrence.mapper.BaseMapper">
+      <point x="-164.0" y="0.0" />
+      <point x="157.0" y="0.0" />
+    </edge>
+    <edge source="com.bmstu.flowrence.service.DashboardService" target="com.bmstu.flowrence.service.AbstractEntityService">
+      <point x="213.0" y="0.0" />
+      <point x="-129.0" y="0.0" />
+    </edge>
+    <edge source="com.bmstu.flowrence.repository.TaskRepository" target="com.bmstu.flowrence.repository.BaseEntityRepository">
+      <point x="-201.5" y="0.0" />
+      <point x="124.0" y="0.0" />
+    </edge>
+    <edge source="com.bmstu.flowrence.service.TasksService" target="com.bmstu.flowrence.service.AbstractEntityService">
+      <point x="0.0" y="-65.5" />
+      <point x="1640.0" y="315.0" />
+      <point x="-129.0" y="35.0" />
+    </edge>
+    <edge source="com.bmstu.flowrence.mapper.dto.DashboardToDashboardInfoMapper" target="com.bmstu.flowrence.mapper.BaseMapper">
+      <point x="0.0" y="-29.5" />
+      <point x="0.0" y="41.5" />
+    </edge>
+    <edge source="com.bmstu.flowrence.service.UserService" target="com.bmstu.flowrence.service.AbstractEntityService">
+      <point x="0.0" y="-16.5" />
+      <point x="1360.0" y="297.5" />
+      <point x="-129.0" y="17.5" />
+    </edge>
+    <edge source="com.bmstu.flowrence.repository.BaseEntityRepository" target="com.bmstu.flowrence.entity.BaseEntity">
+      <point x="124.0" y="5.0" />
+      <point x="2320.0" y="125.0" />
+      <point x="0.0" y="-29.5" />
+    </edge>
+    <edge source="com.bmstu.flowrence.repository.UserRepository" target="com.bmstu.flowrence.repository.BaseEntityRepository">
+      <point x="0.0" y="-29.5" />
+      <point x="0.0" y="16.5" />
+    </edge>
+    <edge source="com.bmstu.flowrence.mapper.dto.RegisterCredentialsToUserMapper" target="com.bmstu.flowrence.mapper.BaseMapper">
+      <point x="0.0" y="29.5" />
+      <point x="960.0" y="780.0" />
+      <point x="157.0" y="-20.0" />
+    </edge>
+    <edge source="com.bmstu.flowrence.service.AbstractEntityService" target="com.bmstu.flowrence.entity.BaseEntity">
+      <point x="129.0" y="0.0" />
+      <point x="-74.0" y="0.0" />
+    </edge>
+  </edges>
+  <settings layout="Orthogonal" zoom="0.702433628318584" x="845.0000000000001" y="462.6535433070867" />
+  <SelectedNodes />
+  <Categories>
+    <Category>Properties</Category>
+    <Category>Methods</Category>
+  </Categories>
+  <SCOPE>Project Files</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+
