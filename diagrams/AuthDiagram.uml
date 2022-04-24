@@ -1,0 +1,307 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement>com.bmstu.flowrence.auth.exception.UserAlreadyExistsException</OriginalElement>
+  <nodes>
+    <node x="199.5" y="236.0">java.lang.Throwable</node>
+    <node x="2683.4816849816852" y="83.0">org.springframework.web.context.ServletContextAware</node>
+    <node x="3307.666666666667" y="297.0">lombok.experimental.FieldDefaults</node>
+    <node x="441.5" y="297.0">lombok.experimental.Accessors</node>
+    <node x="2750.25" y="646.0">com.bmstu.flowrence.auth.jwt.service.JwtUserDetailsService</node>
+    <node x="2099.25" y="297.0">lombok.RequiredArgsConstructor</node>
+    <node x="3059.666666666667" y="297.0">org.springframework.security.core.userdetails.UserDetailsService</node>
+    <node x="2435.3150183150183" y="0.0">org.springframework.beans.factory.Aware</node>
+    <node x="1998.6666666666665" y="646.0">com.bmstu.flowrence.auth.jwt.JwtTokenFilter</node>
+    <node x="1292.25" y="96.0">org.springframework.beans.factory.InitializingBean</node>
+    <node x="2673.75" y="297.0">org.springframework.stereotype.Service</node>
+    <node x="1861.25" y="248.0">org.springframework.web.filter.GenericFilterBean</node>
+    <node x="1856.25" y="83.0">org.springframework.core.env.EnvironmentCapable</node>
+    <node x="1043.25" y="96.0">org.springframework.security.config.annotation.SecurityConfigurer</node>
+    <node x="707.5" y="212.0">org.springframework.security.core.userdetails.UserDetails</node>
+    <node x="1728.25" y="96.0">javax.servlet.Filter</node>
+    <node x="15.0" y="933.0">org.springframework.security.core.AuthenticationException</node>
+    <node x="2485.4816849816852" y="83.0">org.springframework.beans.factory.BeanNameAware</node>
+    <node x="3456.291666666667" y="646.0">com.bmstu.flowrence.auth.jwt.configuration.JwtAuthenticationConfiguration</node>
+    <node x="589.75" y="525.0">com.bmstu.flowrence.auth.jwt.user.JwtUser</node>
+    <node x="2397.25" y="297.0">javax.transaction.Transactional</node>
+    <node x="1070.5" y="284.0">org.springframework.security.config.annotation.SecurityConfigurerAdapter</node>
+    <node x="206.5" y="850.0">java.lang.RuntimeException</node>
+    <node x="1175.0" y="646.0">com.bmstu.flowrence.auth.jwt.JwtConfigurer</node>
+    <node x="241.5" y="646.0">java.lang.Exception</node>
+    <node x="551.9204822954832" y="96.0">java.io.Serializable</node>
+    <node x="1120.5" y="0.0">org.springframework.security.config.annotation.SecurityBuilder</node>
+    <node x="3541.291666666667" y="297.0">org.springframework.context.annotation.Configuration</node>
+    <node x="3245.923992673993" y="96.0">org.springframework.stereotype.Component</node>
+    <node x="2941.666666666667" y="297.0">lombok.extern.slf4j.Slf4j</node>
+    <node x="313.0" y="933.0">com.bmstu.flowrence.auth.exception.UserAlreadyExistsException</node>
+    <node x="0.0" y="1016.0">com.bmstu.flowrence.auth.jwt.exception.JwtAuthenticationException</node>
+    <node x="2257.4816849816852" y="83.0">org.springframework.context.EnvironmentAware</node>
+    <node x="1520.25" y="96.0">org.springframework.beans.factory.DisposableBean</node>
+    <node x="599.5" y="297.0">lombok.Data</node>
+    <node x="3111.0" y="646.0">com.bmstu.flowrence.auth.jwt.service.JwtTokenService</node>
+    <node x="2406.5" y="646.0">com.bmstu.flowrence.auth.service.UserAuthenticationService</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="com.bmstu.flowrence.auth.service.UserAuthenticationService" target="javax.transaction.Transactional">
+      <point x="-37.25" y="-16.5" />
+      <point x="2518.25" y="505.0" />
+      <point x="2486.25" y="505.0" />
+      <point x="0.0" y="16.5" />
+    </edge>
+    <edge source="org.springframework.web.filter.GenericFilterBean" target="org.springframework.beans.factory.DisposableBean">
+      <point x="-62.28571428571422" y="-65.5" />
+      <point x="1907.9642857142858" y="182.0" />
+      <point x="1614.25" y="182.0" />
+      <point x="0.0" y="16.5" />
+    </edge>
+    <edge source="com.bmstu.flowrence.auth.jwt.service.JwtUserDetailsService" target="lombok.RequiredArgsConstructor">
+      <point x="-96.75" y="-16.5" />
+      <point x="2782.5" y="465.0" />
+      <point x="2307.75" y="465.0" />
+      <point x="69.5" y="16.5" />
+    </edge>
+    <edge source="java.lang.Throwable" target="java.io.Serializable">
+      <point x="0.0" y="-77.5" />
+      <point x="310.5" y="192.0" />
+      <point x="593.9204822954832" y="192.0" />
+      <point x="-42.0" y="16.5" />
+    </edge>
+    <edge source="java.lang.RuntimeException" target="java.lang.Exception">
+      <point x="0.0" y="-16.5" />
+      <point x="0.0" y="16.5" />
+    </edge>
+    <edge source="com.bmstu.flowrence.auth.jwt.service.JwtTokenService" target="lombok.experimental.FieldDefaults">
+      <point x="24.75" y="-16.5" />
+      <point x="3234.75" y="495.0" />
+      <point x="3396.666666666667" y="495.0" />
+      <point x="0.0" y="16.5" />
+    </edge>
+    <edge source="org.springframework.web.context.ServletContextAware" target="org.springframework.beans.factory.Aware">
+      <point x="0.0" y="-29.5" />
+      <point x="2802.4816849816852" y="53.0" />
+      <point x="2516.9816849816852" y="53.0" />
+      <point x="32.66666666666674" y="16.5" />
+    </edge>
+    <edge source="com.bmstu.flowrence.auth.jwt.JwtConfigurer" target="org.springframework.security.config.annotation.SecurityConfigurerAdapter">
+      <point x="-44.5" y="-16.5" />
+      <point x="0.0" y="29.5" />
+    </edge>
+    <edge source="org.springframework.security.config.annotation.SecurityConfigurer" target="org.springframework.security.config.annotation.SecurityBuilder">
+      <point x="0.0" y="-16.5" />
+      <point x="1157.25" y="63.0" />
+      <point x="1170.0" y="63.0" />
+      <point x="-49.5" y="16.5" />
+    </edge>
+    <edge source="org.springframework.security.config.annotation.SecurityConfigurerAdapter" target="org.springframework.security.config.annotation.SecurityBuilder">
+      <point x="74.5" y="-29.5" />
+      <point x="1294.0" y="192.0" />
+      <point x="1281.75" y="192.0" />
+      <point x="1281.75" y="63.0" />
+      <point x="1269.0" y="63.0" />
+      <point x="49.5" y="16.5" />
+    </edge>
+    <edge source="org.springframework.security.core.AuthenticationException" target="java.lang.RuntimeException">
+      <point x="0.0" y="-16.5" />
+      <point x="154.0" y="908.0" />
+      <point x="258.5" y="908.0" />
+      <point x="-52.0" y="16.5" />
+    </edge>
+    <edge source="org.springframework.web.filter.GenericFilterBean" target="org.springframework.beans.factory.BeanNameAware">
+      <point x="62.28571428571422" y="-65.5" />
+      <point x="2032.5357142857142" y="172.0" />
+      <point x="2574.4816849816852" y="172.0" />
+      <point x="0.0" y="29.5" />
+    </edge>
+    <edge source="com.bmstu.flowrence.auth.service.UserAuthenticationService" target="lombok.RequiredArgsConstructor">
+      <point x="-111.75" y="-16.5" />
+      <point x="2443.75" y="505.0" />
+      <point x="2261.416666666667" y="505.0" />
+      <point x="23.166666666666742" y="16.5" />
+    </edge>
+    <edge source="com.bmstu.flowrence.auth.jwt.service.JwtTokenService" target="org.springframework.stereotype.Component">
+      <point x="74.25" y="-16.5" />
+      <point x="3284.25" y="505.0" />
+      <point x="3530.791666666667" y="505.0" />
+      <point x="3530.791666666667" y="192.0" />
+      <point x="3314.923992673993" y="192.0" />
+      <point x="0.0" y="16.5" />
+    </edge>
+    <edge source="com.bmstu.flowrence.auth.jwt.service.JwtUserDetailsService" target="lombok.extern.slf4j.Slf4j">
+      <point x="32.25" y="-16.5" />
+      <point x="2911.5" y="495.0" />
+      <point x="2990.666666666667" y="495.0" />
+      <point x="0.0" y="16.5" />
+    </edge>
+    <edge source="org.springframework.web.filter.GenericFilterBean" target="org.springframework.web.context.ServletContextAware">
+      <point x="93.42857142857133" y="-65.5" />
+      <point x="2063.6785714285716" y="182.0" />
+      <point x="2802.4816849816852" y="182.0" />
+      <point x="0.0" y="29.5" />
+    </edge>
+    <edge source="org.springframework.stereotype.Service" target="org.springframework.stereotype.Component">
+      <point x="1.1368683772161603E-13" y="-16.5" />
+      <point x="2732.75" y="192.0" />
+      <point x="3268.923992673993" y="192.0" />
+      <point x="-46.0" y="16.5" />
+    </edge>
+    <edge source="com.bmstu.flowrence.auth.jwt.service.JwtUserDetailsService" target="org.springframework.security.core.userdetails.UserDetailsService">
+      <point x="96.75" y="-16.5" />
+      <point x="2976.0" y="505.0" />
+      <point x="3173.666666666667" y="505.0" />
+      <point x="0.0" y="16.5" />
+    </edge>
+    <edge source="org.springframework.web.filter.GenericFilterBean" target="org.springframework.context.EnvironmentAware">
+      <point x="31.14285714285711" y="-65.5" />
+      <point x="2001.392857142857" y="162.0" />
+      <point x="2361.4816849816852" y="162.0" />
+      <point x="0.0" y="29.5" />
+    </edge>
+    <edge source="com.bmstu.flowrence.auth.jwt.user.JwtUser" target="lombok.Data">
+      <point x="-42.875" y="-137.5" />
+      <point x="718.375" y="505.0" />
+      <point x="643.5" y="505.0" />
+      <point x="0.0" y="16.5" />
+    </edge>
+    <edge source="com.bmstu.flowrence.auth.jwt.JwtConfigurer" target="lombok.RequiredArgsConstructor">
+      <point x="44.5" y="-16.5" />
+      <point x="1308.5" y="495.0" />
+      <point x="2168.75" y="495.0" />
+      <point x="-69.5" y="16.5" />
+    </edge>
+    <edge source="com.bmstu.flowrence.auth.exception.UserAlreadyExistsException" target="java.lang.RuntimeException">
+      <point x="0.0" y="-16.5" />
+      <point x="467.0" y="908.0" />
+      <point x="362.5" y="908.0" />
+      <point x="52.0" y="16.5" />
+    </edge>
+    <edge source="org.springframework.web.filter.GenericFilterBean" target="javax.servlet.Filter">
+      <point x="-31.14285714285711" y="-65.5" />
+      <point x="1939.107142857143" y="172.0" />
+      <point x="1782.25" y="172.0" />
+      <point x="0.0" y="16.5" />
+    </edge>
+    <edge source="com.bmstu.flowrence.auth.jwt.exception.JwtAuthenticationException" target="org.springframework.security.core.AuthenticationException">
+      <point x="0.0" y="-16.5" />
+      <point x="0.0" y="16.5" />
+    </edge>
+    <edge source="com.bmstu.flowrence.auth.jwt.service.JwtUserDetailsService" target="org.springframework.stereotype.Service">
+      <point x="-32.25" y="-16.5" />
+      <point x="2847.0" y="455.0" />
+      <point x="2762.25" y="455.0" />
+      <point x="29.500000000000114" y="16.5" />
+    </edge>
+    <edge source="com.bmstu.flowrence.auth.service.UserAuthenticationService" target="lombok.extern.slf4j.Slf4j">
+      <point x="111.75" y="-16.5" />
+      <point x="2667.25" y="485.0" />
+      <point x="2958.0" y="485.0" />
+      <point x="-32.66666666666663" y="16.5" />
+    </edge>
+    <edge source="com.bmstu.flowrence.auth.service.UserAuthenticationService" target="org.springframework.stereotype.Service">
+      <point x="37.25" y="-16.5" />
+      <point x="2592.75" y="475.0" />
+      <point x="2703.25" y="475.0" />
+      <point x="-29.5" y="16.5" />
+    </edge>
+    <edge source="java.lang.Exception" target="java.lang.Throwable">
+      <point x="0.0" y="-16.5" />
+      <point x="0.0" y="77.5" />
+    </edge>
+    <edge source="org.springframework.context.EnvironmentAware" target="org.springframework.beans.factory.Aware">
+      <point x="0.0" y="-29.5" />
+      <point x="2361.4816849816852" y="63.0" />
+      <point x="2451.6483516483518" y="63.0" />
+      <point x="-32.66666666666674" y="16.5" />
+    </edge>
+    <edge source="org.springframework.web.filter.GenericFilterBean" target="org.springframework.core.env.EnvironmentCapable">
+      <point x="0.0" y="-65.5" />
+      <point x="0.0" y="29.5" />
+    </edge>
+    <edge source="com.bmstu.flowrence.auth.jwt.service.JwtTokenService" target="lombok.RequiredArgsConstructor">
+      <point x="-74.25" y="-16.5" />
+      <point x="3135.75" y="445.0" />
+      <point x="2354.0833333333335" y="445.0" />
+      <point x="115.83333333333348" y="16.5" />
+    </edge>
+    <edge source="com.bmstu.flowrence.auth.jwt.user.JwtUser" target="org.springframework.security.core.userdetails.UserDetails">
+      <point x="42.875" y="-137.5" />
+      <point x="804.125" y="505.0" />
+      <point x="879.0" y="505.0" />
+      <point x="0.0" y="101.5" />
+    </edge>
+    <edge source="com.bmstu.flowrence.auth.jwt.user.JwtUser" target="lombok.experimental.Accessors">
+      <point x="-128.625" y="-137.5" />
+      <point x="632.625" y="505.0" />
+      <point x="510.5" y="505.0" />
+      <point x="0.0" y="16.5" />
+    </edge>
+    <edge source="org.springframework.web.filter.GenericFilterBean" target="org.springframework.beans.factory.InitializingBean">
+      <point x="-93.42857142857156" y="-65.5" />
+      <point x="1876.8214285714284" y="192.0" />
+      <point x="1396.25" y="192.0" />
+      <point x="0.0" y="16.5" />
+    </edge>
+    <edge source="com.bmstu.flowrence.auth.jwt.JwtTokenFilter" target="org.springframework.web.filter.GenericFilterBean">
+      <point x="-47.0" y="-16.5" />
+      <point x="2045.6666666666665" y="475.0" />
+      <point x="1970.25" y="475.0" />
+      <point x="0.0" y="65.5" />
+    </edge>
+    <edge source="org.springframework.security.core.userdetails.UserDetails" target="java.io.Serializable">
+      <point x="0.0" y="-101.5" />
+      <point x="879.0" y="192.0" />
+      <point x="677.9204822954832" y="192.0" />
+      <point x="42.0" y="16.5" />
+    </edge>
+    <edge source="com.bmstu.flowrence.auth.jwt.user.JwtUser" target="lombok.RequiredArgsConstructor">
+      <point x="128.625" y="-137.5" />
+      <point x="889.875" y="485.0" />
+      <point x="2122.416666666667" y="485.0" />
+      <point x="-115.83333333333326" y="16.5" />
+    </edge>
+    <edge source="com.bmstu.flowrence.auth.jwt.JwtTokenFilter" target="lombok.RequiredArgsConstructor">
+      <point x="47.0" y="-16.5" />
+      <point x="2139.6666666666665" y="505.0" />
+      <point x="2215.083333333333" y="505.0" />
+      <point x="-23.166666666666742" y="16.5" />
+    </edge>
+    <edge source="org.springframework.security.config.annotation.SecurityConfigurerAdapter" target="org.springframework.security.config.annotation.SecurityConfigurer">
+      <point x="-74.5" y="-29.5" />
+      <point x="1145.0" y="192.0" />
+      <point x="1157.25" y="192.0" />
+      <point x="0.0" y="16.5" />
+    </edge>
+    <edge source="com.bmstu.flowrence.auth.jwt.service.JwtTokenService" target="lombok.extern.slf4j.Slf4j">
+      <point x="-24.75" y="-16.5" />
+      <point x="3185.25" y="435.0" />
+      <point x="3023.333333333333" y="435.0" />
+      <point x="32.66666666666663" y="16.5" />
+    </edge>
+    <edge source="org.springframework.beans.factory.BeanNameAware" target="org.springframework.beans.factory.Aware">
+      <point x="0.0" y="-29.5" />
+      <point x="2574.4816849816852" y="63.0" />
+      <point x="2484.3150183150183" y="63.0" />
+      <point x="0.0" y="16.5" />
+    </edge>
+    <edge source="org.springframework.context.annotation.Configuration" target="org.springframework.stereotype.Component">
+      <point x="0.0" y="-16.5" />
+      <point x="3630.291666666667" y="182.0" />
+      <point x="3360.923992673993" y="182.0" />
+      <point x="46.0" y="16.5" />
+    </edge>
+    <edge source="com.bmstu.flowrence.auth.jwt.configuration.JwtAuthenticationConfiguration" target="org.springframework.context.annotation.Configuration">
+      <point x="0.0" y="-16.5" />
+      <point x="0.0" y="16.5" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="0.40000000000000013" x="1373.4999999999995" y="463.72222222222206" />
+  <SelectedNodes>
+    <node>com.bmstu.flowrence.auth.jwt.user.JwtUser</node>
+  </SelectedNodes>
+  <Categories>
+    <Category>Properties</Category>
+  </Categories>
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+

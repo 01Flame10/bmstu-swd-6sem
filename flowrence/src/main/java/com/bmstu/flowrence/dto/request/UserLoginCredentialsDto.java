@@ -8,7 +8,7 @@ import java.io.Serializable;
 
 @Getter
 @FieldDefaults(level = AccessLevel.PRIVATE)
-public class UserLoginCredentialsDto implements Serializable {
+public class UserLoginCredentialsDto implements RequestDto {
 
     String email;
     String password;

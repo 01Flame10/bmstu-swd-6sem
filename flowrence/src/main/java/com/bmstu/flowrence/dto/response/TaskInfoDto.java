@@ -8,7 +8,7 @@ import lombok.experimental.FieldDefaults;
 @Getter
 @Builder
 @FieldDefaults(level = AccessLevel.PRIVATE, makeFinal = true)
-public class TaskInfoDto { // jsonSchema2pojo next time, for sure...
+public class TaskInfoDto implements ResponseDto { // jsonSchema2pojo next time, for sure...
 
     String uuid;
     String simpleIdentifier;

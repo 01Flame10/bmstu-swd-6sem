@@ -10,7 +10,7 @@ import java.io.Serializable;
 @Getter
 @Builder
 @FieldDefaults(level = AccessLevel.PRIVATE, makeFinal = true)
-public class JwtTokenDto implements Serializable {
+public class JwtTokenDto implements ResponseDto {
 
     String jwtToken;
     String userUuid;

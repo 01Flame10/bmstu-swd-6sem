@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement>com.bmstu.flowrence.dto.request.personal.AbstractPersonalRequestDto</OriginalElement>
+  <nodes>
+    <node x="161.0" y="1143.5">com.bmstu.flowrence.dto.response.ResponseDto</node>
+    <node x="161.0" y="1274.5">com.bmstu.flowrence.dto.response.TaskInfoDto</node>
+    <node x="1206.0" y="174.5">com.bmstu.flowrence.dto.request.UserRegisterCredentialsDto</node>
+    <node x="1011.0" y="374.5">com.bmstu.flowrence.dto.request.DashboardCreateRequestDto</node>
+    <node x="-4.0" y="2.5">com.bmstu.flowrence.dto.request.personal.TaskUpdateRequestDto</node>
+    <node x="1381.0" y="1062.5">com.bmstu.flowrence.entity.Task</node>
+    <node x="681.0" y="1070.5">com.bmstu.flowrence.dto.response.UserInfoDto</node>
+    <node x="-39.0" y="1118.5">com.bmstu.flowrence.dto.response.JwtTokenDto</node>
+    <node x="1126.0" y="1170.5">com.bmstu.flowrence.entity.BaseEntity</node>
+    <node x="661.0" y="358.5">com.bmstu.flowrence.dto.request.UserLoginCredentialsDto</node>
+    <node x="-11.5" y="1622.5">com.bmstu.flowrence.auth.jwt.user.JwtUser</node>
+    <node x="891.0" y="1122.5">com.bmstu.flowrence.entity.Dashboard</node>
+    <node x="726.0" y="223.5">com.bmstu.flowrence.dto.request.RequestDto</node>
+    <node x="409.0" y="986.5">com.bmstu.flowrence.dto.response.TeamInfoDto</node>
+    <node x="136.0" y="882.5">com.bmstu.flowrence.dto.response.DashboardInfoDto</node>
+    <node x="386.0" y="-16.5">com.bmstu.flowrence.dto.request.personal.TaskRetrieveRequestDto</node>
+    <node x="676.0" y="90.5">com.bmstu.flowrence.dto.request.TeamCreateRequestDto</node>
+    <node x="1111.5" y="886.5">com.bmstu.flowrence.entity.User</node>
+    <node x="366.0" y="210.5">com.bmstu.flowrence.dto.request.personal.AbstractPersonalRequestDto</node>
+    <node x="396.0" y="670.5">com.bmstu.flowrence.dto.request.personal.TaskCreateRequestDto</node>
+    <node x="81.0" y="223.5">com.bmstu.flowrence.dto.request.personal.ListTeamsRequestDto</node>
+    <node x="1101.0" y="1306.5">com.bmstu.flowrence.entity.Team</node>
+    <node x="766.0" y="570.5">com.bmstu.flowrence.dto.request.personal.UserToTeamActionRequestDto</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="com.bmstu.flowrence.dto.request.UserRegisterCredentialsDto" target="com.bmstu.flowrence.dto.request.RequestDto">
+      <point x="-154.0" y="0.0" />
+      <point x="74.0" y="0.0" />
+    </edge>
+    <edge source="com.bmstu.flowrence.dto.response.TeamInfoDto" target="com.bmstu.flowrence.dto.response.ResponseDto">
+      <point x="0.0" y="53.5" />
+      <point x="520.0" y="1150.0" />
+      <point x="79.0" y="-10.0" />
+    </edge>
+    <edge source="com.bmstu.flowrence.dto.request.personal.TaskCreateRequestDto" target="com.bmstu.flowrence.dto.request.personal.AbstractPersonalRequestDto">
+      <point x="0.0" y="-89.5" />
+      <point x="0.0" y="29.5" />
+    </edge>
+    <edge source="com.bmstu.flowrence.entity.Dashboard" target="com.bmstu.flowrence.entity.BaseEntity">
+      <point x="69.0" y="0.0" />
+      <point x="-74.0" y="0.0" />
+    </edge>
+    <edge source="com.bmstu.flowrence.entity.User" target="com.bmstu.flowrence.entity.BaseEntity">
+      <point x="0.0" y="113.5" />
+      <point x="0.0" y="-29.5" />
+    </edge>
+    <edge source="com.bmstu.flowrence.dto.request.personal.TaskUpdateRequestDto" target="com.bmstu.flowrence.dto.request.personal.AbstractPersonalRequestDto">
+      <point x="124.0" y="0.0" />
+      <point x="480.0" y="80.0" />
+      <point x="-40.0" y="-29.5" />
+    </edge>
+    <edge source="com.bmstu.flowrence.dto.request.personal.UserToTeamActionRequestDto" target="com.bmstu.flowrence.dto.request.personal.AbstractPersonalRequestDto">
+      <point x="-154.0" y="0.0" />
+      <point x="560.0" y="600.0" />
+      <point x="40.0" y="29.5" />
+    </edge>
+    <edge source="com.bmstu.flowrence.dto.response.TaskInfoDto" target="com.bmstu.flowrence.dto.response.ResponseDto">
+      <point x="0.0" y="-125.5" />
+      <point x="0.0" y="16.5" />
+    </edge>
+    <edge source="com.bmstu.flowrence.entity.Team" target="com.bmstu.flowrence.entity.BaseEntity">
+      <point x="0.0" y="-53.5" />
+      <point x="0.0" y="29.5" />
+    </edge>
+    <edge source="com.bmstu.flowrence.dto.response.JwtTokenDto" target="com.bmstu.flowrence.dto.response.ResponseDto">
+      <point x="79.0" y="0.0" />
+      <point x="-79.0" y="0.0" />
+    </edge>
+    <edge source="com.bmstu.flowrence.entity.Task" target="com.bmstu.flowrence.entity.BaseEntity">
+      <point x="-99.0" y="0.0" />
+      <point x="74.0" y="0.0" />
+    </edge>
+    <edge source="com.bmstu.flowrence.dto.request.TeamCreateRequestDto" target="com.bmstu.flowrence.dto.request.RequestDto">
+      <point x="0.0" y="29.5" />
+      <point x="0.0" y="-16.5" />
+    </edge>
+    <edge source="com.bmstu.flowrence.dto.response.UserInfoDto" target="com.bmstu.flowrence.dto.response.ResponseDto">
+      <point x="-79.0" y="0.0" />
+      <point x="79.0" y="0.0" />
+    </edge>
+    <edge source="com.bmstu.flowrence.dto.request.personal.TaskRetrieveRequestDto" target="com.bmstu.flowrence.dto.request.personal.AbstractPersonalRequestDto">
+      <point x="0.0" y="16.5" />
+      <point x="0.0" y="-29.5" />
+    </edge>
+    <edge source="com.bmstu.flowrence.dto.request.personal.AbstractPersonalRequestDto" target="com.bmstu.flowrence.dto.request.RequestDto">
+      <point x="154.0" y="0.0" />
+      <point x="-74.0" y="0.0" />
+    </edge>
+    <edge source="com.bmstu.flowrence.dto.request.personal.ListTeamsRequestDto" target="com.bmstu.flowrence.dto.request.personal.AbstractPersonalRequestDto">
+      <point x="119.0" y="0.0" />
+      <point x="-154.0" y="0.0" />
+    </edge>
+    <edge source="com.bmstu.flowrence.dto.response.DashboardInfoDto" target="com.bmstu.flowrence.dto.response.ResponseDto">
+      <point x="0.0" y="77.5" />
+      <point x="0.0" y="-16.5" />
+    </edge>
+    <edge source="com.bmstu.flowrence.dto.request.DashboardCreateRequestDto" target="com.bmstu.flowrence.dto.request.RequestDto">
+      <point x="0.0" y="-65.5" />
+      <point x="1160.0" y="250.0" />
+      <point x="74.0" y="10.0" />
+    </edge>
+    <edge source="com.bmstu.flowrence.dto.request.UserLoginCredentialsDto" target="com.bmstu.flowrence.dto.request.RequestDto">
+      <point x="0.0" y="-41.5" />
+      <point x="0.0" y="16.5" />
+    </edge>
+  </edges>
+  <settings layout="Orthogonal" zoom="0.45855048859934866" x="1242.5374445237887" y="680.5499083083787" />
+  <SelectedNodes />
+  <Categories>
+    <Category>Properties</Category>
+  </Categories>
+  <SCOPE>Project Files</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+
